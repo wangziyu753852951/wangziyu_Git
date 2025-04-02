@@ -1,0 +1,44 @@
+#screen {
+    width: 400px;
+    height: 200px;
+    font-size: 20px;
+    background-color: rgba(153, 189, 95,0.5);
+    color: white;
+    border-radius: 10px;
+
+    text-align: center;
+    line-height: 100px;
+}
+
+#match-button {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(153, 189, 95,0.5);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+}
+
+#ai-button {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(153, 189, 95,0.5);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+}
+#match-button:active {
+    background-color: gray;
+}

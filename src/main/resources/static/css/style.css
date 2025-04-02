@@ -1,0 +1,80 @@
+/* 重置一些默认的样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 设定整体的背景和布局 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #7c7cd2;
+    background-image: url(../image/huaji.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 封面内容的容器 */
+.cover {
+    text-align: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    background-image: url(../image/backg.jpg);/* 替换为你的封面背景图片 */
+    background-size: cover;
+    background-position: center;
+}
+
+/* 标题样式 */
+.title {
+    background-image: url(../image/huaji.jpg); /* 替换为标题区背景图片 */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.title h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.title p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* 按钮区样式 */
+.buttons {
+    margin-top: 30px;
+    background-image: url(../image/backg.jpg); /* 替换为按钮区背景图片 */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+

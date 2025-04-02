@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/commen.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="nav">
+    五子棋对战
+</div>
+<div class="login-container">
+    <!-- 登录界面的对话框 -->
+    <div class="login-dialog">
+        <!-- 提示信息 -->
+        <h3>注册</h3>
+        <!-- 这个表示一行 -->
+        <div class="row">
+            <span>用户名</span>
+            <input type="text" id="username">
+        </div>
+        <!-- 这是另一行 -->
+        <div class="row">
+            <span>密码</span>
+            <input type="password" id="password">
+        </div>
+        <!-- 提交按钮 -->
+        <div class="row">
+            <button id="submit">提交</button>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-3.7.1.js"></script>
+<script>
+    let usernameInput = document.querySelector('#username');
+    let passwordInput = document.querySelector('#password');
+    let submitButton = document.querySelector('#submit');
+    submitButton.onclick = function(){
+        $.ajax({
+            type:'post',
+            url:'/register',
+            data:{
+                username:usernameInput.value,
+                password:passwordInput.value,
+            },
+            success:function(body){
+                if(body && body.username){
+                    alert("注册成功");
+                    location.assign("/login.html");
+                }else{
+                    alert("success:注册失败");
+                }
+            },
+            error: function(xhr, status, error) {
+            // 请求失败时，显示详细的错误信息
+            console.error('错误信息：', error);  // 打印错误信息
+            console.error('状态信息：', status);  // 打印状态信息
+            console.error('HTTP 状态码：', xhr.status);  // 打印 HTTP 状态码
+            alert("注册失败! 状态码：" + xhr.status + ", 错误信息：" + error);
+        }
+        });
+    }
+</script>
+</body>
+</html>
