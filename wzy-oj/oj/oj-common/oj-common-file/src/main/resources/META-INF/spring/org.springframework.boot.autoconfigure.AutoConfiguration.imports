@@ -1,0 +1,3 @@
+com.wzy.common.file.config.OSSConfig
+com.wzy.common.file.service.OSSService
+com.wzy.common.file.config.OSSProperties

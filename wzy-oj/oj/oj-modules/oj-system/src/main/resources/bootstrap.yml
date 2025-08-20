@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: oj-system
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      discovery:
+        namespace: 86422ca6-af53-4227-88d5-0e472c6b0803
+        server-addr: http://114.55.245.190:8848
+        username: nacos
+        password: nacosbitoj_8
+        ip: ${HOST_IP}
+      config:
+        namespace: 86422ca6-af53-4227-88d5-0e472c6b0803
+        server-addr: http://114.55.245.190:8848
+        file-extension: yaml
+        username: nacos
+        password: nacosbitoj_8
